@@ -22,7 +22,7 @@ export default function NavbarDropdown ({ userId }) {
     async function handleLogout(){
        const result = await logOut();
 
-        if(!result.success){
+        /* if(!result.success){
             setIsAuthenticated({
                 loading: false,
                 isConnected: false,
@@ -31,7 +31,14 @@ export default function NavbarDropdown ({ userId }) {
             if(await isPrivatePage(window.location.pathname)){
                 router.push('/signin');
             }
-        }
+        } */
+            setIsAuthenticated({
+                loading: false,
+                isConnected: false,
+                userId: null
+            });
+            router.push('/'); // Redirige toujours vers la home après logout
+
     }
 
 
