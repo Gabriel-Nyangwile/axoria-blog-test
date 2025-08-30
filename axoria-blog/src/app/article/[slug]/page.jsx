@@ -4,7 +4,7 @@ import Link from 'next/link';
 import "./article-styles.css"
 import 'prism-themes/themes/prism-vsc-dark-plus.css'
 import Image  from 'next/image';
-import NotFound from '../not-found';
+import NotFound from "next/navigation"
 
 export default async function page({params}) {
 
